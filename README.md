@@ -1,8 +1,4 @@
-git clone git@github.com:zxcvb17295/vim_config.git
-
-
-
-rm -rf .vim .
+rm -rf .vim .vimrc
 
 ln -s vim_config/.vim  ~/.vim
 
