@@ -9,4 +9,5 @@ cd .vim
 mkdir bundle
 cd bundle
 git clone https://github.com/scrooloose/nerdtree.git
+git clone https://github.com/terryma/vim-multiple-cursors.git
 ```
