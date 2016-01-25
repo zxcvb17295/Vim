@@ -12,6 +12,7 @@ set ic
 set scrolloff=2
 set tabstop=2
 set shiftwidth=2
+set expandtab
 set cursorline
 set cursorcolumn
 set mouse=nv
