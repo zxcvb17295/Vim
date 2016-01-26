@@ -14,7 +14,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set mouse=nv
 
 set t_Co=256
