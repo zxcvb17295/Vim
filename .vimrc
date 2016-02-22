@@ -6,8 +6,9 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
-"set number
-"set relativenumber
+"set number "行號
+"set relativenumber "相對應行號
+"set clipboard=unnamed "共用系統剪貼簿
 set ic
 set scrolloff=2
 set tabstop=2
