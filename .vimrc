@@ -16,7 +16,7 @@ set shiftwidth=2
 set expandtab
 set cursorline
 "set cursorcolumn
-set mouse=nv
+"set mouse=nv
 
 set t_Co=256
 colorscheme molokai
