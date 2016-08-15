@@ -5,10 +5,6 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 **setp2:** Use vimrc
 ```
-$ cp vimrc ~/.vimrc
-```
-or
-```
 $ ln -s vimrc ~/.vimrc
 ```
 
