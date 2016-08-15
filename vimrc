@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 " utilities
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 
 " syntax
