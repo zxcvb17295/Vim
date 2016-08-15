@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " utilities
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
 Plugin 'terryma/vim-multiple-cursors'
 
 " syntax
@@ -33,6 +34,9 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <C-n> :NERDTreeToggle<CR>
+
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-d>'
