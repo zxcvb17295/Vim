@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'easymotion/vim-easymotion'
 
 " syntax
 Plugin 'othree/html5.vim'
@@ -45,6 +46,17 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+" Move to line
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme molokai
@@ -54,7 +66,7 @@ set t_Co=256
 "set number
 set relativenumber
 set ic
-set scrolloff=2
+set scrolloff=4
 set tabstop=2
 set shiftwidth=2
 set expandtab
