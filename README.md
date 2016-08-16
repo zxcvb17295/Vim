@@ -5,7 +5,7 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 **setp2:** Use vimrc
 ```
-$ ln -s vimrc ~/.vimrc
+$ ln -s vim-workshop/vimrc ~/.vimrc
 ```
 or
 ```
