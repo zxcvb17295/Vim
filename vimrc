@@ -18,6 +18,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'Valloric/MatchTagAlways'
 
 " syntax
 Plugin 'othree/html5.vim'
@@ -51,11 +52,13 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 " Move to line
-map <Leader>l <Plug>(easymotion-bd-jk)
-nmap <Leader>l <Plug>(easymotion-overwin-line)
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+let g:mta_use_matchparen_group = 1
 
 let g:molokai_original = 1
 let g:rehash256 = 1
@@ -63,7 +66,7 @@ colorscheme molokai
 
 set encoding=utf8
 set t_Co=256
-"set number
+set number
 set relativenumber
 set ic
 set scrolloff=4
