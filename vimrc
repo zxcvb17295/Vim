@@ -66,8 +66,8 @@ colorscheme molokai
 
 set encoding=utf8
 set t_Co=256
-set number
-set relativenumber
+"set number
+"set relativenumber
 set ic
 set scrolloff=4
 set tabstop=2
