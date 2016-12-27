@@ -19,6 +19,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'Valloric/MatchTagAlways'
+" brew install CMake
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.py --all
+Plugin 'Valloric/YouCompleteMe'
 
 " syntax
 Plugin 'othree/html5.vim'
