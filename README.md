@@ -1,24 +1,6 @@
-**setp1:** Clone Vundle
 ```
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+make init
 ```
-
-**setp2:** Use vimrc
 ```
-$ ln -s vim-workshop/vimrc ~/.vimrc
-```
-or
-```
-$ cp vimrc ~/.vimrc
-```
-
-**setp3:** Install plugins
-
-Use vim:
-```
-$ :PluginInstall
-```
-Use command line:
-```
-$ vim +PluginInstall +qall
+make update
 ```
