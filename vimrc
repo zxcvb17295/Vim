@@ -19,6 +19,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'Valloric/MatchTagAlways'
+Plugin 'Yggdroot/indentLine'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'jiangmiao/auto-pairs'
 
 " syntax
 Plugin 'othree/html5.vim'
@@ -39,6 +42,8 @@ filetype plugin indent on
 map <C-n> :NERDTreeToggle<CR>
 
 set laststatus=2
+set backspace=indent,eol,start
+
 let g:airline_powerline_fonts = 1
 
 let g:multi_cursor_use_default_mapping=0
@@ -57,6 +62,14 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" indentLine
+let g:indentLine_char='│'
+let g:indentLine_enabled = 1
+
+" autopep8
+" $ pip install autopep8
+let g:autopep8_disable_show_diff=1
 
 let g:mta_use_matchparen_group = 1
 
