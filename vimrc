@@ -22,6 +22,9 @@ Plugin 'Valloric/MatchTagAlways'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-commentary'
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-entire'
 
 " syntax
 Plugin 'othree/html5.vim'
@@ -89,5 +92,8 @@ set expandtab
 set cursorline
 "set cursorcolumn
 "set mouse=nv
+set nrformats=
+set wildmenu
+set wildmode=full
 
 syntax on
