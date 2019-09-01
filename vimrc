@@ -25,6 +25,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
+Plugin 'scrooloose/syntastic'
+Plugin 'Chiel92/vim-autoformat'
 
 " syntax
 Plugin 'othree/html5.vim'
@@ -79,6 +81,22 @@ let g:mta_use_matchparen_group = 1
 let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme molokai
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_standard_generic = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint'
+
+let g:formatdef_eslint = '"SRC=eslint-temp-${RANDOM}.js; cat - >$SRC; eslint --fix $SRC >/dev/null 2>&1; cat $SRC | perl -pe \"chomp if eof\"; rm -f $SRC"'
+let g:formatters_javascript = ['eslint']
+noremap <F3> :Autoformat<CR>:w<CR>
+
 
 set encoding=utf8
 set t_Co=256
