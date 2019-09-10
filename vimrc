@@ -27,6 +27,9 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.py --all
+Plugin 'Valloric/YouCompleteMe'
 
 " syntax
 Plugin 'othree/html5.vim'
