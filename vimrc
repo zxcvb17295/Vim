@@ -25,8 +25,13 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
+" npm install -g eslint
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
+" npm install -g prettier
+" cd ~/.vim/bundle/vim-prettier
+" npm install
+Plugin 'prettier/vim-prettier'
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --all
 Plugin 'Valloric/YouCompleteMe'
@@ -100,6 +105,10 @@ let g:formatdef_eslint = '"SRC=eslint-temp-${RANDOM}.js; cat - >$SRC; eslint --f
 let g:formatters_javascript = ['eslint']
 noremap <F3> :Autoformat<CR>:w<CR>
 
+let g:prettier#autoformat = 0
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.md,*.vue,*.yaml,*.yml,*.html PrettierAsync
 
 set encoding=utf8
 set t_Co=256
