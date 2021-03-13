@@ -20,21 +20,20 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'Yggdroot/indentLine'
-Plugin 'tell-k/vim-autopep8'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 " npm install -g eslint
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
 " npm install -g prettier
 " cd ~/.vim/bundle/vim-prettier
 " npm install
-Plugin 'prettier/vim-prettier'
+"Plugin 'prettier/vim-prettier'
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --all
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 " syntax
 Plugin 'othree/html5.vim'
