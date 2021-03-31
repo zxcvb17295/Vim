@@ -34,6 +34,7 @@ Plugin 'prettier/vim-prettier'
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --all
 "Plugin 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
 
 " syntax
 Plugin 'othree/html5.vim'
