@@ -25,6 +25,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 " npm install -g eslint
+" pip install pylint
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
 " npm install -g prettier
@@ -96,6 +97,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_standard_generic = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint'
+let g:syntastic_python_checkers = ['pylint']
 
 function! SyntasticCheckHook(errors)
     if !empty(a:errors)
