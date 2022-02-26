@@ -24,18 +24,6 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
-" npm install -g eslint
-" pip install pylint
-Plugin 'scrooloose/syntastic'
-Plugin 'Chiel92/vim-autoformat'
-" npm install -g prettier
-" cd ~/.vim/bundle/vim-prettier
-" npm install
-Plugin 'prettier/vim-prettier'
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.py --all
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'fatih/vim-go'
 
 " syntax
 Plugin 'othree/html5.vim'
@@ -81,38 +69,14 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 let g:indentLine_char='│'
 let g:indentLine_enabled = 1
 
+" auto-pairs
+let g:AutoPairsFlyMode = 1
+
 let g:mta_use_matchparen_group = 1
 
 let g:molokai_original = 1
 let g:rehash256 = 1
 colorscheme molokai
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_standard_generic = 1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint'
-let g:syntastic_python_checkers = ['pylint']
-
-function! SyntasticCheckHook(errors)
-    if !empty(a:errors)
-        let g:syntastic_loc_list_height = min([len(a:errors), 10])
-    endif
-endfunction
-
-let g:formatdef_eslint = '"SRC=eslint-temp-${RANDOM}.js; cat - >$SRC; eslint --fix $SRC >/dev/null 2>&1; cat $SRC | perl -pe \"chomp if eof\"; rm -f $SRC"'
-let g:formatters_javascript = ['eslint']
-noremap <F3> :Autoformat<CR>:w<CR>
-
-let g:prettier#autoformat = 0
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#config#jsx_bracket_same_line = 'false'
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.md,*.vue,*.yaml,*.yml,*.html PrettierAsync
 
 set encoding=utf8
 set t_Co=256
