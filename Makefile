@@ -20,7 +20,7 @@ init:
 	@if [ ! -f "$(PLUG_VIM)" ]; then \
 		echo "未找到 vim-plug。正在從 GitHub 下載..."; \
 		curl -fLo $(PLUG_VIM) --create-dirs \
-		'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'; \ 
+		'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'; \
 	else \
 		echo "vim-plug 已存在。跳過下載。"; \
 	fi

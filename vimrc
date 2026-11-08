@@ -32,6 +32,7 @@ set cursorline              " Highlight the current line
 " This will store undo history in ~/.vim/undodir, even after closing Vim
 try
     set undodir=~/.vim/undodir
+    call mkdir(expand(&undodir), 'p')
     set undofile
 catch
 endtry
@@ -50,18 +51,21 @@ endtry
 call plug#begin('~/.vim/plugged')
 
 " --- General UI & Utilities ---
-Plug 'vim-airline/vim-airline'  " The status bar
+Plug 'itchyny/lightline.vim'    " The status bar
 Plug 'Yggdroot/indentLine'      " Indentation guides
 Plug 'jiangmiao/auto-pairs'     " Auto-close pairs of quotes, brackets, etc.
 Plug 'tpope/vim-commentary'     " gc to comment/uncomment lines
 
 " --- File & Git Management ---
 " Lazy-load NERDTree on command
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 " Lazy-load Fugitive on command
-Plug 'tpope/vim-fugitive', { 'on': ['Gstatus', 'Gdiff', 'Gblame', 'Gcommit'] }
+Plug 'tpope/vim-fugitive', { 'on': ['Git', 'G', 'Gstatus', 'Gdiff', 'Gblame', 'Gcommit'] }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " --- Editing & Motion ---
+Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors' " VSCode-like multiple cursors
 Plug 'easymotion/vim-easymotion'      " Super-fast motions
 Plug 'kana/vim-textobj-user'          " Support for custom text objects
@@ -86,15 +90,9 @@ filetype plugin indent on
 " => Plugin Configuration
 "==============================================================================
 
-" --- vim-airline ---
-" NOTE: For the special symbols (arrows, etc.) to work, you must use a
-" "Powerline-patched font" in your terminal settings.
-" If you don't have one, your status bar might look "broken" (跑版).
-let g:airline_powerline_fonts = 1
-"
-" **IF YOU HAVE ISSUES:** If you don't want to install a special font,
-" uncomment the line below to use plain characters for the airline theme.
-" let g:airline_powerline_fonts = 0
+" --- lightline ---
+let g:lightline = { 'colorscheme': 'wombat' }
+set noshowmode
 
 " --- NERDTree ---
 map <C-n> :NERDTreeToggle<CR>
